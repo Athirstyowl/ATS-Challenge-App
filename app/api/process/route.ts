@@ -7,11 +7,11 @@ export async function POST(request: Request) {
     const { query, csvHeader } = await request.json();
     
     // Get the host from the request headers or use the Vercel deployment URL
-    const baseUrl = process.env.VERCEL_URL
+    const baseUrl = "https://ats-challenge-app-mken.vercel.app"
     console.log(baseUrl, "routes")
     
     // Call the LLM API to get the filter and rank plans
-    const llmResponse = await fetch(new URL('/api/llm', baseUrl), {
+    const llmResponse = await fetch(new URL(`${baseUrl}/api/llm`), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ export async function POST(request: Request) {
     const summaryPrompt = `Given the following list of candidates, generate a concise, recruiter-friendly summary including the number of candidates, average years of experience, and top skills. Keep it short and easy to understand.\n\nCandidates:\n${JSON.stringify(candidateSummary, null, 2)}`;
 
     // Call the LLM to generate the summary
-    const summaryResponse = await fetch(new URL('/api/llm', baseUrl), {
+    const summaryResponse = await fetch(`${baseUrl}/api/llm`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

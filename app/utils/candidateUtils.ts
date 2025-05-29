@@ -3,10 +3,10 @@ import { Candidate, FilterPlan, RankPlan, Stats } from '../types';
 export const readCSV = async (): Promise<Candidate[]> => {
   try {
     // Use Vercel URL in production, fallback to localhost in development
-    const baseUrl = process.env.VERCEL_URL
+    const baseUrl = "https://ats-challenge-app-mken.vercel.app"
     console.log(baseUrl, "candidate")
     
-    const response = await fetch(new URL('/api/candidates', baseUrl));
+    const response = await fetch(`${baseUrl}/api/candidates`);
     const { candidates } = await response.json();
     
     if (!candidates || !Array.isArray(candidates)) {
