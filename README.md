@@ -103,3 +103,4 @@ ATS‑Lite: I found 7 matches (avg 6.1 yrs). Here are the top three…
 ### Keep It Small 📎
 
 No auth, no uploads, no database — just a CSV in memory, two synchronous tools, two LLM calls, and a polished UI that lets reviewers **watch the ATS think** in real time.
+# ATS-Challenge-App
