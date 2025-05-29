@@ -1,9 +1,11 @@
-import Image from "next/image";
+import ATSChallengeApp from "./ATSChallengeApp";
+import { JSX } from "react/jsx-runtime";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <div>
-      <h1>ATS Challenge</h1>
-    </div>
+    <>
+     <ATSChallengeApp />
+    </> 
+   
   );
 }
