@@ -1,3 +1,84 @@
+# ATS Challenge App
+
+A modern ATS (Applicant Tracking System) that helps recruiters efficiently process and evaluate candidate resumes using AI.
+
+## Features
+
+- AI-powered resume parsing and analysis
+- Candidate ranking and filtering
+- Experience-based sorting
+- Modern, responsive UI
+- Real-time processing
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- TailwindCSS
+- OpenAI API
+- Google AI API (Gemini)
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Athirstyowl/ATS-Challenge-App.git
+cd ATS-Challenge-App
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+Then edit `.env.local` and add your API keys.
+
+4. Run the development server:
+```bash
+pnpm dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Testing
+
+Run the test suite:
+```bash
+pnpm test
+```
+
+## Deployment
+
+The application is deployed on Vercel and can be accessed at: [Add your deployment URL here]
+
+## Project Structure
+
+```
+ats-challenge/
+├── app/              # Next.js app directory
+├── components/       # React components
+├── lib/             # Utility functions and API clients
+├── public/          # Static assets
+└── tests/           # Test files
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 # ATS Challenge — “Watch the ATS Think”
 
 *A mini coding exercise that shows off front‑end polish, back‑end logic, and a transparent agent loop.*
@@ -103,4 +184,3 @@ ATS‑Lite: I found 7 matches (avg 6.1 yrs). Here are the top three…
 ### Keep It Small 📎
 
 No auth, no uploads, no database — just a CSV in memory, two synchronous tools, two LLM calls, and a polished UI that lets reviewers **watch the ATS think** in real time.
-# ATS-Challenge-App
