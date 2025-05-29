@@ -3,9 +3,8 @@ import { Candidate, FilterPlan, RankPlan, Stats } from '../types';
 export const readCSV = async (): Promise<Candidate[]> => {
   try {
     // Use Vercel URL in production, fallback to localhost in development
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const baseUrl = process.env.VERCEL_URL
+    console.log(baseUrl, "candidate")
     
     const response = await fetch(new URL('/api/candidates', baseUrl));
     const { candidates } = await response.json();

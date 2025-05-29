@@ -7,9 +7,8 @@ export async function POST(request: Request) {
     const { query, csvHeader } = await request.json();
     
     // Get the host from the request headers or use the Vercel deployment URL
-    const host = process.env.VERCEL_URL || request.headers.get('host') || 'localhost:3000';
-    const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
-    const baseUrl = `${protocol}://${host}`;
+    const baseUrl = process.env.VERCEL_URL
+    console.log(baseUrl, "routes")
     
     // Call the LLM API to get the filter and rank plans
     const llmResponse = await fetch(new URL('/api/llm', baseUrl), {
